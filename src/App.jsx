@@ -1,7 +1,36 @@
-export default function App() {
+import React, { Suspense } from 'react';
+import { CustomerReview,Hero,Navbar,Footer,Subscribe,Service,SpecialOffer,SuperQuality,PopularProducts } from './Components';
+
+const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <main className="relative">
+      <Navbar/>
+      <section className="xl:padding-1 wide:padding-r padding-b">
+        <Hero/>
+      </section>
+      <section className="padding mt-2">
+        <PopularProducts/>
+      </section>
+      <section className="padding">
+      <SuperQuality/>
+      </section>
+      <section className="padding-x py-10">
+        <Service/>
+    </section>
+    <section className="padding">
+      <SpecialOffer/>
+      </section>
+      <section className="padding bg-pale-blue">
+       <CustomerReview/>
+      </section>
+      <section className="padding-x py-16 sm:py-32 w-full">
+        <Subscribe/>
+      </section>
+      <section className="padding-x padding-t bg-black pb-8">
+        <Footer/>
+      </section>
+    </main>
   )
 }
+
+export default App
