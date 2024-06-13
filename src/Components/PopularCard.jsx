@@ -5,7 +5,7 @@ const PopularCard = ({imgURL,name,price,rating}) => {
   return (
     <div className='flex flex-col w-full'>
         <div className='flex justify-center'>
-        <img src={imgURL} alt={name} className='w-3/4 h-5/6'/>
+        <img src={imgURL} alt={name} className='w-3/4 h-5/6 hover:translate-y-3'/>
         </div>
         <div className='flex flex-row justify-center'>
             <img src={star} alt="star"/>

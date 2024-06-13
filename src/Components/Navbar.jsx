@@ -38,10 +38,10 @@ const Navbar = () => {
           <img src={hamburger} alt="hamburger" width={25} height={25}/>
         </div>
       </nav>
-      <div ref={dropdownRef} className="mt-3 pl-3 w-full hidden absolute z-10">
-        <ul>
+      <div ref={dropdownRef} className="mt-3  w-full hidden absolute z-10">
+        <ul >
         {navLinks.map((item)=>{
-          return <li key={item.label} className='bg-blue-50'>
+          return <li key={item.label} className='bg-pale-blue'>
             <a href="/" className="text-slate-gray text-lg font-montserrat leading-normal">
             {item.label}
             </a>
