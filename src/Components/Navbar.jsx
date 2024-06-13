@@ -22,7 +22,8 @@ const Navbar = () => {
     <header className='padding-x py-10  w-full '>
       <nav className='flex justify-between items-center  max-container'>
         <a href="/">
-        <img src={headerLogo} alt="logo" height={29} width={130}/>
+        <div className='text-coral-red text-lg font-bold'>SWOOSH</div>
+        {/* <img src={headerLogo} alt="logo" height={29} width={130}/> */}
         </a>
         <ul className="flex flex-1 justify-center items-center gap-16 max-lg:hidden">
          {navLinks.map((item)=>{
@@ -37,7 +38,7 @@ const Navbar = () => {
           <img src={hamburger} alt="hamburger" width={25} height={25}/>
         </div>
       </nav>
-      <div ref={dropdownRef} className="mt-3 pl-3  hidden">
+      <div ref={dropdownRef} className="mt-3 pl-3 w-full hidden absolute z-10">
         <ul>
         {navLinks.map((item)=>{
           return <li key={item.label} className='bg-blue-50'>

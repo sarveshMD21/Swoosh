@@ -5,13 +5,13 @@ const App = () => {
   return (
     <main className="relative">
       <Navbar/>
-      <section className="xl:padding-1  padding-b">
+      <section className="xl:padding-1  padding-b  bg-pale-blue">
         <Hero/>
       </section>
       <section className="padding mt-2">
         <PopularProducts/>
       </section>
-      <section className="padding">
+      <section className="padding  bg-pale-blue">
       <SuperQuality/>
       </section>
       <section className="padding-x py-10">
