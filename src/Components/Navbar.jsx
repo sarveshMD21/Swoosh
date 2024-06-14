@@ -20,12 +20,17 @@ const Navbar = () => {
  
   return (
     <header className='padding-x py-10  w-full '>
-      <nav className='flex justify-between items-center  max-container'>
+      <nav className='flex lg:flex-row flex-col items-center  max-container gap-40'>
+        <div className='flex lg:w-1/3 w-full justify-between  '>
         <a href="/">
         <div className='text-coral-red text-lg font-bold'>SWOOSH</div>
-        {/* <img src={headerLogo} alt="logo" height={29} width={130}/> */}
         </a>
-        <ul className="flex flex-1 justify-center items-center gap-16 max-lg:hidden">
+        <div className='hidden max-lg:block' onClick={handleClick}>
+          <img src={hamburger} alt="hamburger" width={25} height={25}/>
+        </div>
+        </div>
+        <div ref={dropdownRef} className=' bg-white'>
+        <ul className="flex lg:flex-row  flex-col flex-1 justify-end items-center gap-16 ">
          {navLinks.map((item)=>{
           return <li key={item.label}>
             <a href="/" className="text-slate-gray text-lg font-montserrat leading-normal">
@@ -34,11 +39,10 @@ const Navbar = () => {
           </li>
          })}
         </ul>
-        <div className='hidden max-lg:block' onClick={handleClick}>
-          <img src={hamburger} alt="hamburger" width={25} height={25}/>
         </div>
+      
       </nav>
-      <div ref={dropdownRef} className="mt-3  w-5/6  hidden absolute z-10">
+      {/* <div ref={dropdownRef} className="mt-3  w-5/6  hidden absolute z-10">
         <ul >
         {navLinks.map((item)=>{
           return <li key={item.label} className='bg-black p-2 transition ease-out duration-200'>
@@ -48,7 +52,7 @@ const Navbar = () => {
           </li>
          })}
         </ul>
-      </div>
+      </div> */}
     </header>
   )
 }
